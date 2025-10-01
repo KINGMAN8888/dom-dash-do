@@ -1,73 +1,159 @@
-# Welcome to your Lovable project
+# Dom Dash Do - Todo List Application
 
-## Project info
+A beautiful, modern todo list application built with React, TypeScript, and Tailwind CSS. Features a clean interface with task management capabilities including filtering, stats, and local storage persistence.
 
-**URL**: https://lovable.dev/projects/c55665c1-e840-4609-9929-0841ea480d6d
+![Todo App](https://img.shields.io/badge/React-18.3.1-61dafb?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178c6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.4.19-646cff?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.17-38b2ac?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- **📝 Task Management**: Add, complete, and delete tasks
+- **🔍 Smart Filtering**: Filter tasks by status (All, Active, Completed)
+- **📊 Statistics**: Track your productivity with task stats
+- **💾 Local Storage**: Your tasks persist between sessions
+- **🎨 Beautiful UI**: Modern design with shadcn/ui components
+- **📱 Responsive**: Works seamlessly on all devices
+- **⚡ Fast**: Built with Vite for lightning-fast development
 
-**Use Lovable**
+## 🚀 Quick Start
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c55665c1-e840-4609-9929-0841ea480d6d) and start prompting.
+### Prerequisites
 
-Changes made via Lovable will be committed automatically to this repo.
+Make sure you have Node.js installed on your machine. You can download it from [nodejs.org](https://nodejs.org/).
 
-**Use your preferred IDE**
+### Installation
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Clone the repository**
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+   ```bash
+   git clone https://github.com/KINGMAN8888/dom-dash-do.git
+   cd dom-dash-do
+   ```
 
-Follow these steps:
+2. **Install dependencies**
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3. **Start the development server**
 
-# Step 3: Install the necessary dependencies.
-npm i
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun run dev
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+4. **Open your browser**
+
+   Navigate to `http://localhost:8080` to see the application running.
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework**: React 18.3.1
+- **Language**: TypeScript 5.8.3
+- **Build Tool**: Vite 5.4.19
+- **Styling**: Tailwind CSS 3.4.17
+- **UI Components**: shadcn/ui with Radix UI primitives
+- **Icons**: Lucide React
+- **Routing**: React Router DOM
+- **State Management**: React Hooks + Local Storage
+- **Form Handling**: React Hook Form with Zod validation
+- **Notifications**: Sonner (Toast notifications)
+
+## 📁 Project Structure
+
+```plaintext
+dom-dash-do/
+├── public/                 # Static assets
+├── src/
+│   ├── components/        # Reusable components
+│   │   ├── ui/           # shadcn/ui components
+│   │   ├── AddTodo.tsx   # Add todo component
+│   │   ├── TodoItem.tsx  # Individual todo item
+│   │   ├── TodoFilter.tsx # Filter component
+│   │   └── TodoStats.tsx # Statistics component
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions
+│   ├── pages/            # Page components
+│   │   ├── Index.tsx     # Main todo page
+│   │   └── NotFound.tsx  # 404 page
+│   ├── App.tsx           # Main app component
+│   └── main.tsx          # Application entry point
+├── package.json          # Dependencies and scripts
+├── tailwind.config.ts    # Tailwind configuration
+├── tsconfig.json         # TypeScript configuration
+└── vite.config.ts        # Vite configuration
 ```
 
-**Edit a file directly in GitHub**
+## 🎯 Available Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run build:dev` | Build for development |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
 
-**Use GitHub Codespaces**
+## 🚀 Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The application can be deployed on any static hosting service:
 
-## What technologies are used for this project?
+### Vercel (Recommended)
 
-This project is built with:
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect Vite and configure the build settings
+3. Your app will be deployed on every push to the main branch
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Netlify
 
-## How can I deploy this project?
+1. Build the project: `npm run build`
+2. Deploy the `dist` folder to Netlify
+3. Configure build command: `npm run build`
+4. Configure publish directory: `dist`
 
-Simply open [Lovable](https://lovable.dev/projects/c55665c1-e840-4609-9929-0841ea480d6d) and click on Share -> Publish.
+### GitHub Pages
 
-## Can I connect a custom domain to my Lovable project?
+1. Install gh-pages: `npm install --save-dev gh-pages`
+2. Add deploy script to package.json: `"deploy": "gh-pages -d dist"`
+3. Build and deploy: `npm run build && npm run deploy`
 
-Yes, you can!
+## 🤝 Contributing
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+### KingmanJou
+
+- GitHub: [@KINGMAN8888](https://github.com/KINGMAN8888)
+- Portfolio: [kingmanjou.dev](https://kingmanjou.dev)
+
+---
+
+**Made with ❤️ by KingmanJou**
+
+⭐ Star this repository if you found it helpful!

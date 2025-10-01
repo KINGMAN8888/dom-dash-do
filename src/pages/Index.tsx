@@ -84,7 +84,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse-subtle" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse-subtle" style={{ animationDelay: "1s" }} />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse-subtle animation-delay-1s" />
 
       <div className="container max-w-3xl mx-auto px-4 py-8 md:py-12 relative z-10">
         <div className="text-center mb-8">
